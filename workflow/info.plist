@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>iansinnott.keyboardmaestro</string>
+	<string>com.matthieuoger.keyboardmaestro</string>
 	<key>category</key>
-	<string>Tools</string>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
 		<key>417EDFE4-EEA3-4586-BACB-72B5CD1488FA</key>
@@ -31,28 +31,15 @@
 				<false/>
 			</dict>
 		</array>
-		<key>BFD32886-A59A-4774-B2A0-58CB7956DAF5</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>417EDFE4-EEA3-4586-BACB-72B5CD1488FA</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Ian Sinnott</string>
+	<string>Ian Sinnott, modified by Matthieu Oger</string>
 	<key>description</key>
-	<string>Search Keyboard Maestro Macros</string>
+	<string>Search and execute Keyboard Maestro macros</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Alfred Maestro</string>
+	<string>Keyboard Maestro</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -63,9 +50,7 @@
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
-				<string>-- No error checking to make sure they actually have KM
--- The passed query is the UID of the macro
-tell application "Keyboard Maestro Engine"
+				<string>tell application "Keyboard Maestro Engine"
   do script "{query}"
 end tell</string>
 				<key>scriptargtype</key>
@@ -85,31 +70,20 @@ end tell</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>triggerid</key>
-				<string>run</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>BFD32886-A59A-4774-B2A0-58CB7956DAF5</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>km</string>
+				<string>run</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -119,7 +93,7 @@ end tell</string>
 				<key>queuemode</key>
 				<integer>2</integer>
 				<key>runningsubtext</key>
-				<string>Searching Keyboard Maestro...</string>
+				<string>Searching Keyboard Maestro…</string>
 				<key>script</key>
 				<string>./alfred-maestro "$1"</string>
 				<key>scriptargtype</key>
@@ -127,9 +101,9 @@ end tell</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>Execute Keyboard Maestro Macro</string>
+				<string>Search for Keyboard Maestro macros and run</string>
 				<key>title</key>
-				<string>Do Macro</string>
+				<string>Run macro…</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -140,7 +114,7 @@ end tell</string>
 			<key>uid</key>
 			<string>417EDFE4-EEA3-4586-BACB-72B5CD1488FA</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -170,47 +144,42 @@ end tell</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string># Alfred Maestro
+	<string>Modified version of https://github.com/iansinnott/alfred-maestro by Ian Sinnott. 
 
-### By Ian Sinnott
+See https://blog.iansinnott.com/integrating-alfred-with-keyboard-maestro/ for more information.
 
-Author URL: http://iansinnott.com
-Email: http://iansinnott.com/contact
-Twitter: @ian_sinn</string>
+Modified by Matthieu Oger (https://matthieuoger.com/).</string>
 	<key>uidata</key>
 	<dict>
 		<key>417EDFE4-EEA3-4586-BACB-72B5CD1488FA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>210</integer>
+			<integer>190</integer>
 			<key>ypos</key>
-			<integer>30</integer>
+			<integer>180</integer>
 		</dict>
 		<key>47DF9774-B3A1-4F9A-A39C-FDA6FE0DE22A</key>
 		<dict>
+			<key>note</key>
+			<string>Run the macro.</string>
 			<key>xpos</key>
-			<integer>390</integer>
+			<integer>445</integer>
 			<key>ypos</key>
-			<integer>30</integer>
+			<integer>100</integer>
 		</dict>
 		<key>6B794F4B-9458-4E04-8F4C-01610BD7D273</key>
 		<dict>
+			<key>note</key>
+			<string>(While holding CMD) Open the macro in Keyboard Maestro editor.</string>
 			<key>xpos</key>
-			<integer>390</integer>
+			<integer>445</integer>
 			<key>ypos</key>
-			<integer>170</integer>
-		</dict>
-		<key>BFD32886-A59A-4774-B2A0-58CB7956DAF5</key>
-		<dict>
-			<key>xpos</key>
-			<integer>40</integer>
-			<key>ypos</key>
-			<integer>30</integer>
+			<integer>275</integer>
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>0.2.2</string>
+	<string>1.0.0</string>
 	<key>webaddress</key>
-	<string>http://iansinnott.com</string>
+	<string>https://matthieuoger.com/</string>
 </dict>
 </plist>
