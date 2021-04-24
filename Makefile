@@ -16,3 +16,4 @@ pack: build
 
 # Documentation for M1/Intel cross-compilation and universal binary:
 # https://www.yellowduck.be/posts/golang-vs-apple-silicon/
+# Note, this might not work on M1 because of new security restrictions.
