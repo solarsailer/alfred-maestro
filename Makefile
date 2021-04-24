@@ -5,7 +5,7 @@ build:
 	lipo -create -output alfred-maestro alfred-maestro-x86 alfred-maestro-arm
 	@echo "Done."
 
-pack: build
+package: build
 	@echo "Compiling Alfred package…"
 	@mv alfred-maestro workflow/
 	@zip --junk-paths --quiet "KeyboardMaestro.alfredworkflow" workflow/*
